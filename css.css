@@ -1,0 +1,147 @@
+.hide{
+    display: none;
+}
+
+.flex{
+	display: flex;
+	align-items: center;
+}
+.flexBetween{
+	justify-content: space-between;
+}
+.flexEvenly{
+	justify-content: space-evenly;
+}
+.flexCenter{
+	justify-content: center;
+}
+.flexWrap{
+	flex-flow: row wrap;
+}
+.flexStart{
+	align-items: flex-start;
+}
+.grid{
+	padding: 1em;
+	display: grid;
+	grid-column-gap: 1em;
+  	grid-row-gap: 1em;
+}
+.grid:not(.align) > *{
+	align-self: center;
+}
+.formGrid{
+	grid-template-columns: [label] auto [input] 1fr [end];
+}
+.formGrid label{
+	border-bottom: 5px solid var(--clr-main);
+}
+@media only screen and ( max-width: 650px )
+{
+	.formGrid{
+		grid-template-columns: [label] auto [end];
+  		grid-row-gap: .5em;
+	}
+	.formGrid > label,
+	.formGrid > strong.tar{
+		padding-top: .5em;
+	}
+	.formGrid > strong.tar{
+		text-align: left;
+	}
+	.formGrid > div{
+		text-align: right;
+		padding-left: 1em;
+		word-wrap: anywhere;
+	}
+}
+
+.intacTableWrap.fullscreen{
+	background-color: #fff;
+}
+.intacTableWrap .toolbar,
+.intacTableWrap .pagination{
+	padding: 1em;
+}
+.intacTableWrap .btn{
+	margin: 2px;
+	color: #fff;
+	background-color: #444;
+	border: 1px solid #333;
+	border-radius: 5px;
+}
+.intacTableWrap .clicked,
+.intacTableWrap .btn:hover{
+	cursor: pointer;
+	color: #fff;
+	background-color: #666;
+}
+.intacTableWrap .btn-group .btn{
+	margin: 0;
+	border-radius: 0;
+}
+.intacTableWrap .btn-group > :first-child{
+	border-radius: 5px 0 0 5px;
+}
+.intacTableWrap .btn-group > :last-child{
+	border-radius: 0 5px 5px 0;
+}
+.intacTableWrap .intacTableSearchColumnInput{
+    width: 100%;
+}
+.intacTableWrap .intacTableDropdownBtn{
+	display: inline-block;
+	position: relative;
+}
+.intacTableWrap .intacTableDropdownBtn > .intacTableDropdown{
+	position: absolute;
+	background-color: #fff;
+	border: 1px solid #333;
+}
+.intacTableWrap .intacTableDropdown > .intacTableDropdownRow{
+	padding: 0 .5em;
+	display: block;
+	white-space: nowrap;
+}
+.intacTableWrap .intacTableDropdown > .intacTableDropdownRow > input[ type="checkbox" ]{
+	margin-right: .5em;
+}
+.intacTableWrap .intacTableDropdown > .intacTableDropdownRow ~ .intacTableDropdownRow{
+	border-top: 1px solid #999;
+}
+.intacTableWrap .headColumnElmSort{
+    position: relative;
+    cursor: pointer;
+}
+.intacTableWrap .headColumnElmSort.sort-asc::after,
+.intacTableWrap .headColumnElmSort.sort-desc::after{
+    position: absolute;
+    top: 25%;
+    right: .5em;
+    content: '';
+}
+.intacTableWrap .headColumnElmSort.sort-asc:after{
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid #000;
+}
+.intacTableWrap .headColumnElmSort.sort-desc:after{
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 5px solid #000;
+}
+
+.intacTableWrap mark{
+    color: #000000;
+	background-color: yellow;
+}
+.intacTableWrap .mark2{
+    color: #000000;
+	background-color: lightblue;
+}
+.intacTableWrap .bg-green{
+	background-color: #125917;
+}
+.intacTableWrap .bg-green:hover{
+	background-color: #37773c;
+}
